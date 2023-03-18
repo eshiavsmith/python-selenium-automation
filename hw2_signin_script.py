@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from time import sleep
 
 # connect to the Browser
-service = Service('/Users/eshiavsmith/Desktop/Automation/python-selenium-automation/chromedriver')
+service = Service('/chromedriver')
 
 # init (opens) driver
 driver = webdriver.Chrome(service=service)
