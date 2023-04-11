@@ -6,5 +6,9 @@ Feature: Amazon Sign-in Search
    Given Open Amazon page
     When Click on Orders button
     When Email input field is empty
-    Then verify that text "Sign in" is shown
+    Then Verify that text "Sign in" is shown
 
+ Scenario: Amazon cart is empty
+   Given Open Amazon page
+    When Click on Cart button
+    Then Verify that text "Your Amazon Cart is empty" is shown

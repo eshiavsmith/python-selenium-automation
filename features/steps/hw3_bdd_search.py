@@ -19,5 +19,15 @@ def email_search(context):
 
 @then('Verify that text {expected_result} is shown')
 def verify_search(context, expected_result):
-    actual_result = context.driver.find_element(By.XPATH, "//span[@class='a-color-state a-text-bold']").text
+    actual_result = context.driver.find_element(By.XPATH, "//h1[@class='a-spacing-small']").text
     assert expected_result == actual_result, f'Expected {expected_result} but got actual {actual_result}'
+
+
+@when('Click on Cart button')
+def cart_search(context):
+    context.driver.find_element(By.CSS_SELECTOR, 'span.nav-cart-icon.nav-sprite').click()
+
+
+@then('Verify that text is shown')
+def empty_search(context):
+    context.driver.find_element(By.CSS_SELECTOR, 'div.a-row.sc-your-amazon-cart-is-empty').text
