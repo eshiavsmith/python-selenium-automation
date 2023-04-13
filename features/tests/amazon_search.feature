@@ -13,3 +13,5 @@ Feature: Amazon Search test
     When Input text table
     When Click on search button
     Then verify that text "table" is shown
+
+    Scenario: User can add a product to the cart
